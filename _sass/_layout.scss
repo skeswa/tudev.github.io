@@ -1,0 +1,27 @@
+/**
+ * Pages
+ */
+#content {
+    background-color: #e0e8ea;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    z-index: 100;
+
+    .page-container {
+        position: relative;
+        width: 1000%;
+        height: 100%;
+        left: 0px;
+        transition: left 500ms;
+
+        .page {
+            width: 10%;
+            height: 100%;
+            float: left;
+        }
+    }
+}

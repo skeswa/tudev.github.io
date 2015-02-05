@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family:  Helvetica, Arial, sans-serif;
 $base-font-size:    16px;
@@ -29,7 +27,6 @@ $on-palm:           600px;
 $on-laptop:         800px;
 
 
-
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -51,5 +48,6 @@ $on-laptop:         800px;
         "base",
         "nav",
         "layout",
+        "home",
         "syntax-highlighting"
 ;
