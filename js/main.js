@@ -1,35 +1,34 @@
 (function() {
     // Navigate to different screen
     var transitionTo = function(index) {
-            $('.page-container')
-                .css('left', (index * -100) + '%')
-                .css('transform', 'scale(0.85)');
-        };
+        $('.page-container')
+            .css('left', (index * -100) + '%');
+    };
 
     // Sets up the click listeners on nav
     var setupNav = function() {
-        $('nav .logo').click(function() {
-            transitionTo(0);
-            $('.link').removeClass('active');
-            $('nav').addClass('transparent');
-            $(this).addClass('active');
-        });
         $('.about.link').click(function() {
-            transitionTo(1);
+            transitionTo(0);
             $('.link').removeClass('active');
             $('nav').removeClass('transparent');
             $(this).addClass('active');
         });
         $('.schedule.link').click(function() {
-            transitionTo(2);
+            transitionTo(1);
             $('.link').removeClass('active');
             $('nav').removeClass('transparent');
             $(this).addClass('active');
         });
         $('.codeatnight.link').click(function() {
-            transitionTo(3);
+            transitionTo(2);
             $('.link').removeClass('active');
             $('nav').removeClass('transparent');
+            $(this).addClass('active');
+        });
+        $('nav .logo').click(function() {
+            transitionTo(3);
+            $('.link').removeClass('active');
+            $('nav').addClass('transparent');
             $(this).addClass('active');
         });
         $('.devseries.link').click(function() {
@@ -52,25 +51,17 @@
         });
     };
 
-    // Do home bg splash with trianglify
-    var paintHome = function() {
-        var $bg = $('.home.page .bg'),
-            bgWidth = $bg.width(),
-            bgHeight = $bg.height(),
-            trianglifier = new Trianglify({
-                x_gradient: ['#9e1b34', '#ca2242', '#88172d']
-            }),
-            pattern = trianglifier.generate(
-                bgWidth,
-                bgHeight
-            );
-        // Set the background of the div
-        $bg.css('backgroundImage', pattern.dataUrl);
+    var typeIntro = function() {
+        $('.home.page .hello .text').typed({
+            strings: ['Hi there!', 'We\'re TU Dev,^1000 <br>Temple University\'s Software Developer Community'],
+            startDelay: 500,
+            typeSpeed: 50
+        });
     };
 
     // On DOM ready, do stuff
     $(function() {
         setupNav();
-        paintHome();
+        typeIntro();
     });
 })();

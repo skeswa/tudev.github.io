@@ -5,11 +5,23 @@ nav {
     top: 0px;
     right: 0px;
     height: 50px;
-    background: #0F2D40;
+    background: #9e1b34;
     text-align: center;
     z-index: 200;
 
-    &.transparent {
+    &.is-home {
+        background: transparent;
+
+        .logo {
+            height: 100px;
+            background-image: url(/img/icon-dark.png);
+        }
+
+        .links .link {
+            color: #444444;
+            height: 100px;
+            padding-top: 43px;
+        }
         // background: rgba(0, 0, 0, 0);
     }
 

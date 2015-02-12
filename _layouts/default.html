@@ -11,15 +11,13 @@
         <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
         <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
     </head>
     <body>
         {% include nav.html %}
 
         <div id="content">
-            <div class="page-container">
-                <div class="home page">
-                    {% include home.html %}
-                </div>
+            <div class="page-container" style="left: -300%;">
                 <div class="about page">
                     {% include about.html %}
                 </div>
@@ -28,6 +26,9 @@
                 </div>
                 <div class="owlhacks page">
                     {% include hackathons.html %}
+                </div>
+                <div class="home page">
+                    {% include home.html %}
                 </div>
                 <div class="devseries page">
                     {% include devseries.html %}

@@ -18,6 +18,5 @@
     "tests"
   ],
   "dependencies": {
-    "trianglify": "~0.1.5"
   }
 }
