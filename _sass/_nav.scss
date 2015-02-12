@@ -58,7 +58,7 @@ nav {
             opacity: 1.0;
             font-weight: 700;
             -webkit-font-smoothing: antialiased;
-            transition: opacity 250ms, height 500ms, padding-top 500ms;
+            transition: color 500ms, opacity 250ms, height 500ms, padding-top 500ms;
             letter-spacing: 1.5px;
 
             &:last-child {
