@@ -84,10 +84,10 @@
         }, 1000);
         setTimeout(function() {
             $('.description').removeClass('hidden');
-        }, 1750);
+        }, 1500);
         setTimeout(function() {
             $('.learn-more').removeClass('hidden');
-        }, 2500);
+        }, 2000);
     };
 
     // On DOM ready, do stuff

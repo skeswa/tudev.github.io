@@ -21,6 +21,7 @@
         background: url(/img/home-bg.jpg);
         background-size: cover;
         opacity: 0.25;
+        background-position: center;
     }
 
     .gradient {
@@ -34,7 +35,7 @@
 
     .text {
         position: absolute;
-        top: 0px;
+        top: 20px;
         left: 0px;
         right: 0px;
         bottom: 0px;

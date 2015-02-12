@@ -37,7 +37,7 @@ nav {
         background-size: contain;
         background-image: url(/img/icon.png);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: 0px 50%;
         cursor: pointer;
         transition: height 500ms;
     }
@@ -52,7 +52,7 @@ nav {
             margin-right: 60px;
             padding-top: 18px;
             font-family: 'Open Sans', sans-serif;
-            font-size: 12px;
+            font-size: 13px;
             color: white;
             text-transform: uppercase;
             opacity: 1.0;
