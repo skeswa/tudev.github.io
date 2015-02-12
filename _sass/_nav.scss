@@ -51,15 +51,15 @@ nav {
             height: 50px;
             margin-right: 60px;
             padding-top: 18px;
-            font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
             color: white;
             text-transform: uppercase;
             opacity: 1.0;
             font-weight: 700;
             -webkit-font-smoothing: antialiased;
             transition: color 500ms, opacity 250ms, height 500ms, padding-top 500ms;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.75px;
 
             &:last-child {
                 margin-right: 0px;
