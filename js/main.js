@@ -51,6 +51,10 @@
             }
         },
         pageIdOf: function(hashUrl) {
+            if (hashUrl.length >= 2 && hashUrl[0] === '#') {
+                hashUrl = hashUrl.substring(1);
+            }
+
             switch (hashUrl) {
             case Pages.HASH_URL_ABOUT:
                 return Pages.ABOUT;
@@ -214,7 +218,18 @@
     (function() {
         var $page = $('.home.page'),
             $nav = $('nav'),
+            $bg = $page.find('.bg'),
             hasAnimated = false;
+
+        var onMouseMove = function(evt) {
+            var x = evt.pageX,
+                y = evt.pageY,
+                screenWidth = $(window).width(),
+                screenHeight = $(window).height();
+
+                $bg.css('left', (8 * (x - (0.5 * screenWidth)) / (1 * screenWidth) + -25) + '%');
+                $bg.css('top', (8 * (y - (0.5 * screenHeight)) / (1 * screenHeight) + -25) + '%');
+        };
 
         // When moving towards this page, style the nav
         EventBus.on(Events.PAGE_ENTER, function(pageId) {
@@ -226,10 +241,13 @@
         EventBus.on(Events.PAGE_LEAVE, function(pageId) {
             if (pageId === Pages.SPLASH) {
                 $nav.removeClass('is-home');
+                $('body').off('mousemove', onMouseMove);
             }
         });
         // When the site is ready, animate the page
         EventBus.on(Events.PAGE_READY, function(pageId) {
+            $('body').on('mousemove', onMouseMove);
+
             if (!hasAnimated && pageId === Pages.SPLASH) {
                 // Flip the animation flag
                 hasAnimated = true;
